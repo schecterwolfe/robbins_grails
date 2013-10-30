@@ -4,3 +4,35 @@
 *.jar
 *.war
 *.ear
+*.zip
+
+# web application files
+web-app/WEB-INF/
+
+# IDE support files
+*.classpath
+*.launch
+*.project
+*.launch
+*.tmproj
+ivy*
+
+# default HSQL database files for production mode
+prodDb.*
+
+# general HSQL database files
+*Db.properties
+*Db.script
+
+# logs
+stacktrace.log
+**/test/reports
+**/logs
+
+
+# "temporary" build files
+target
+target-eclipse
+
+# other
+*.iws
