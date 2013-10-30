@@ -1,16 +1,16 @@
 package ptrack3
 
-class Project {
+class Task {
 	String name
 	String description
 	Date dueDate
 
-	static belongsTo = [owner: User]
-	static hasMany = [tasks: Task]
+	static belongsTo = [assignee: User, project: Project]
 
 	static constraints = {
-		name(blank: false, unique:true)
+		name(blank: false)
 		dueDate()
 		description()
 	}
 }
+
