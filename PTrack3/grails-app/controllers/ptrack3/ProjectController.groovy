@@ -7,10 +7,12 @@ class ProjectController {
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
+		//log.error("Entered the index method of the Project controller")
         redirect(action: "list", params: params)
     }
 
     def list(Integer max) {
+		//log.info("Entered the list method of the Project controller")
         params.max = Math.min(max ?: 10, 100)
         [projectInstanceList: Project.list(params), projectInstanceTotal: Project.count()]
     }
