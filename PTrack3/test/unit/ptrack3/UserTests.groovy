@@ -11,7 +11,10 @@ import org.junit.*
 @TestFor(User)
 class UserTests {
 
-    void testSomething() {
-       fail "Implement me"
+    void testValid() {
+       def u = new User(userName: 'John', fullName: 'John Doe', password: 'abc123').save()   
+	   assert u != null : "It should be able to save a valid user object"  
+	   assert u.userName == 'John' : "It should have the correct user name"     
+	   assert u.validate() : "The validations should be correct"
     }
 }
